@@ -1,0 +1,47 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/bertranddelouis/SlipNearResults:
+      branch: main
+      repo: https://github.com/bertranddelouis/SlipNearResults
+      subfolder: DTC74/WF7402/ST740203/src
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/bertranddelouis/SlipNearResults git:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-chestnut-heron.sh
+        container: qc.acc_slaphappy-emerald-pig
+  QC.Doc:
+    repos:
+      github.com/bertranddelouis/SlipNearResults find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-persimmon-bison.sh
+        container: qc.doc_woozy-cobalt-cat
+      github.com/bertranddelouis/SlipNearResults git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-violet-dragonfly.sh
+        container: qc.doc_chummy-eggplant-lynx
+      github.com/bertranddelouis/SlipNearResults markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-ochre-molly.sh
+        container: qc.doc_lousy-green-seahorse
+  QC.Lic:
+    repos:
+      github.com/bertranddelouis/SlipNearResults licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-rust-grouse.sh
+        container: qc.lic_snippy-maroon-capuchin
+  QC.Ver:
+    repos:
+      github.com/bertranddelouis/SlipNearResults get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-tomato-booby.sh
+        container: qc.ver_gamy-purple-flamingo
+timeout: 5400
