@@ -16,32 +16,32 @@ sqa_criteria:
     repos:
       github.com/bertranddelouis/SlipNearResults git:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-chestnut-heron.sh
-        container: qc.acc_slaphappy-emerald-pig
+        - /usr/bin/env sh .sqa/script.silly-green-hummingbird.sh
+        container: qc.acc_foggy-sangria-fox
   QC.Doc:
     repos:
       github.com/bertranddelouis/SlipNearResults find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-persimmon-bison.sh
-        container: qc.doc_woozy-cobalt-cat
+        - /usr/bin/env sh .sqa/script.dorky-green-budgerigar.sh
+        container: qc.doc_pretty-black-fowl
       github.com/bertranddelouis/SlipNearResults git:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-violet-dragonfly.sh
-        container: qc.doc_chummy-eggplant-lynx
+        - /usr/bin/env sh .sqa/script.boozy-asparagus-monkey.sh
+        container: qc.doc_slaphappy-crimson-chow
       github.com/bertranddelouis/SlipNearResults markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-ochre-molly.sh
-        container: qc.doc_lousy-green-seahorse
+        - /usr/bin/env sh .sqa/script.gamy-jade-snail.sh
+        container: qc.doc_cheeky-vermilion-beaver
   QC.Lic:
     repos:
       github.com/bertranddelouis/SlipNearResults licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-rust-grouse.sh
-        container: qc.lic_snippy-maroon-capuchin
+        - /usr/bin/env sh .sqa/script.skinny-coral-albatross.sh
+        container: qc.lic_cranky-thistle-raccoon
   QC.Ver:
     repos:
       github.com/bertranddelouis/SlipNearResults get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-tomato-booby.sh
-        container: qc.ver_gamy-purple-flamingo
+        - /usr/bin/env sh .sqa/script.zippy-rust-capuchin.sh
+        container: qc.ver_bumpy-wisteria-dollar
 timeout: 5400
