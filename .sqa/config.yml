@@ -7,7 +7,6 @@ config:
     github.com/bertranddelouis/SlipNearResults:
       branch: main
       repo: https://github.com/bertranddelouis/SlipNearResults
-      subfolder: DTC74/WF7402/ST740203/src
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
@@ -16,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/bertranddelouis/SlipNearResults git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-green-hummingbird.sh
-        container: qc.acc_foggy-sangria-fox
+        - /usr/bin/env sh .sqa/script.woozy-ecru-guppy.sh
+        container: qc.acc_slimy-purple-schnauzer
   QC.Doc:
     repos:
       github.com/bertranddelouis/SlipNearResults find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-green-budgerigar.sh
-        container: qc.doc_pretty-black-fowl
+        - /usr/bin/env sh .sqa/script.muzzy-dandelion-millipede.sh
+        container: qc.doc_sleazy-alizarin-tapir
       github.com/bertranddelouis/SlipNearResults git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-asparagus-monkey.sh
-        container: qc.doc_slaphappy-crimson-chow
+        - /usr/bin/env sh .sqa/script.lanky-aqua-audemer.sh
+        container: qc.doc_hazy-cobalt-hedgehog
       github.com/bertranddelouis/SlipNearResults markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-jade-snail.sh
-        container: qc.doc_cheeky-vermilion-beaver
+        - /usr/bin/env sh .sqa/script.snippy-sangria-shrimp.sh
+        container: qc.doc_clammy-wisteria-dachshund
   QC.Lic:
     repos:
       github.com/bertranddelouis/SlipNearResults licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-coral-albatross.sh
-        container: qc.lic_cranky-thistle-raccoon
+        - /usr/bin/env sh .sqa/script.skanky-seashell-crab.sh
+        container: qc.lic_surly-chocolate-bulldog
   QC.Ver:
     repos:
       github.com/bertranddelouis/SlipNearResults get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-rust-capuchin.sh
-        container: qc.ver_bumpy-wisteria-dollar
+        - /usr/bin/env sh .sqa/script.messy-brass-lobster.sh
+        container: qc.ver_pasty-seashell-burmese
 timeout: 5400

@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/bertranddelouis/SlipNearResults/DTC74/WF7402/ST740203/src &&
-    licensee detect . --confidence 60 --json 
+cd github.com/bertranddelouis/SlipNearResults &&
+    mdl --json  .
 )
